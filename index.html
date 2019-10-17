@@ -3,12 +3,19 @@
         <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <style type="text/css">
+          #alunoList {
+              height: 250px;
+              overflow: auto;
+          }
+        </style>
         <title>Lista de Alunos</title>
     </head>
     <body>
         <div class="container">
             <h1>Lista de Alunos</h1>
             <form id="formAluno">
+                <input type="hidden" id="idhidden" value=""/>
                 <div class="form-grup">
                 <label for="nomeId" class="control-label">Nome</label>
                 <input id="nomeId" placeholder="Digite o Nome " class="form-control" type="text" required/>
@@ -22,18 +29,21 @@
                 <button type="submit" class="btn brn-primary">Atualizar a Lista</button>
                 </div>
             </form>
-            <table>
-                <th>
-                    <tr>
-                        <td></td>
-                        <td>Nome</td>
-                        <td>E-mail</td>
-                    </tr>
-                </th>
+            <div id="alunoList">
+            <table class="table-striped" id="alunoTable">
+                <tr>
+                    
+                    <th class="col-xs-2"></th>
+                    <th class="col-xs-4">Nome</th>
+                    <th class="col-xs-6">E-mail</th>
+                    
+                </tr>
+
             </table>
+            </div>
 
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="javascrip/main.js"></script>  
