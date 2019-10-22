@@ -52,7 +52,7 @@ $('#add-to-list').on('click', (evento) =>{
     })
 })
 function formToJSON(){
-     return JSON.stringfy( {
+     return JSON.stringify( {
              "id": $('#idHidden').val(),
              "nome": $('#nomeId').val(),
              "site": $('#emailId').val(),
