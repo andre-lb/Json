@@ -54,19 +54,21 @@
     <body>
         <div class="container">
             <h1>Lista de Alunos</h1>
-            <form id="formAluno">
+            <form id="formAluno" data-toggle="validator" role="form">
                 <input type="hidden" id="idhidden" value=""/>
                 <div class="form-group">
                 <label for="nomeId" class="control-label">Nome</label>
-                <input id="nomeId" placeholder="Digite o Nome " class="form-control" type="text" required/>
+                <input id="nomeId" placeholder="Digite o Nome " class="form-control" type="text" required minlength="2"/>
                 </div>
                 <div class="form-group">
                     <label for="notaId" class="control-label">Nota</label>
                     <input id="notaId" placeholder="Digite a Nota " class="form-control" type="text" required="true"/>
+                    <div class="help-block with-errors"></div>
                     </div>
                 <div class="form-group">
                 <label for="siteId" class="control-label">Site</label>
                 <input id="siteId" placeholder="Digite o site " class="form-control" type="site" required="true"/>
+                <div class="help-block with-errors"></div>
                 </div>
                 <div class="form-group">
                     <label for="enderecoId" class="control-label">Endereço</label>
@@ -106,6 +108,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="javascrip/main.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
         <footer><p>Desenvolvido By Giovana e André</p></footer>  
     </body>
     

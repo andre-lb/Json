@@ -79,7 +79,9 @@ $('#update-to-list').on('click', (evento) =>{
 
 $('#add-to-list').on('click', (evento) => {
     evento.preventDefault();
-    
+    var validator = $("#formAluno").data("bs.validator");
+    validator.validate();
+    if(!validator.isIncomplete()){
     $.ajax({
         type: 'POST',
         contentType: 'application/json',
@@ -93,7 +95,8 @@ $('#add-to-list').on('click', (evento) => {
         error: function(jqXHR, textStatus, errorThrown){
             alert('Status: ' + textStatus + '\nTipo: ' + errorThrow + '\nMensagem: ' + jqXHR.responseText);
         }
-    })
+    });
+  }
 });
 
 function handler(){
@@ -121,6 +124,9 @@ function handler(){
     $('.action_edit').each(function(){
         $(this).click(function(evento){
             evento.preventDefault();
+            var validator = $("#formAluno").data("bs.validator");
+            validator.validate();
+            if(!validator.isIncomplete()){
             $.ajax({
                 type:'GET',
                 contentType:'application/json',
@@ -142,6 +148,7 @@ function handler(){
                 }
 
             });
+            }
         });
     });
 }
